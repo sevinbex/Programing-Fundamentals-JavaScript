@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  color: firebrick;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 23px;
+}
+
+p.bluePara {
+  color: blue;
+}
+
+p.Brown {
+  color: brown;
+}
