@@ -29,7 +29,7 @@ function memoryGame(input) {
           elements.splice(index1, 1);
         }
       } else {
-        console.log("try again");
+        console.log("Try again!");
       }
     }
     if (elements.length == 0) {
