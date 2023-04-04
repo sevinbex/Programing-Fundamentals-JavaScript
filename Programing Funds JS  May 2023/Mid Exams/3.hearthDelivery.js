@@ -11,7 +11,7 @@ function hearthDelivery(input) {
       // дали индекса е валиден
       houses[indexOfHouse + position] -= 2;
       if (houses[indexOfHouse + position] < 0) {
-        // дали след операцията стойността е 0
+        houses[indexOfHouse + position] = 0;
         console.log(
           `Place ${indexOfHouse + position} already had Valentine's day.`
         );
