@@ -1,27 +1,28 @@
 function songus(array) {
-  class Song {
-    constructor(typeOfSong, nameOfSong, timeOfSong) {
-      this.type = typeOfSong;
-      this.name = nameOfSong;
-      this.time = timeOfSong;
+  class Song {                                          // СЪЗДАВАНЕ НА КЛАС ПЕСНИ
+    constructor(typeOfSong, nameOfSong, timeOfSong) {      
+                                                        //     ФАБРИКА
+      this.type = typeOfSong;                           //   ЗА СЪЗДАВАНЕ
+      this.name = nameOfSong;                           //   НА ПЕСНИ
+      this.time = timeOfSong;                           //
     }
   }
 
-  let songs = [];
-  let numberOfSongs = array.shift();
-  let typeSong = array.pop();
+  let songs = [];                                       // НОВ МАСИВ ЗА ПЕСНИТЕ
+  let numberOfSongs = array.shift();                    // БРОЙ НА ПЕСНИТЕ от ИНПУТА
+  let typeSong = array.pop();                           // ТИПА ПЕСНИ, КОИТО ТРЯБВА ДА СЕ ВИЗУАЛИЗИРАТ
 
-  for (let i = 0; i < numberOfSongs; i++) {
-    let [type, name, time] = array[i].split("_");
-    let song = new Song(type, name, time);
-    songs.push(song);
+  for (let i = 0; i < numberOfSongs; i++) {             //ЦИКЪЛ ЗА ОБХОЖДАНЕ НА ИНПУТ
+    let [type, name, time] = array[i].split("_");       //ДЕСТРУКТУРИРАНЕ НА ЕЛЕМЕНТИТЕ НА МАСИВА
+    let song = new Song(type, name, time);              //СЪЗДАВАНЕ НА ПЕСЕН - носи деструктурирание променливи
+    songs.push(song);                                   //ВМЪКВАНЕ НА СЪЗДАДЕНАТА ПЕСЕН В НОВИЯ МАСИВ
   }
 
-  if (typeSong === "all") {
-    songs.forEach((i) => console.log(i.name));
-  } else {
-    let filtered = songs.filter((i) => i.type === typeSong);
-    filtered.forEach((i) => console.log(i.name));
+  if (typeSong === "all") {                             //ПРОВЕРКА ЗА ТИПА НА ПЛЕЙЛИСТА
+    songs.forEach((i) => console.log(i.name));          //ЦИКЪЛ ЗА ВИЗУАЛИЗИРАНЕ НА ИМЕТО НА ВСЯКА ПЕСЕН ПО УСЛОВИЕ
+  } else {                                              //ВСИЧКИ ОСТАНАЛИ СЛУЧАИ
+    let filtered = songs.filter((i) => i.type === typeSong); // ПРОВЕРКА ПО ТИП (ДАЛИ ОТГОВАРЯ НА УСЛОВИЕТО)
+    filtered.forEach((i) => console.log(i.name));       // ЦИКЪЛ ЗА ВИЗУАЛИЗИРАНЕ НА ОТГОВАРЯЩАТА ПЕСЕН
   }
 }
 
