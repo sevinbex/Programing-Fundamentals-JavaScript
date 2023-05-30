@@ -67,7 +67,7 @@ function pirates(input) {
 
   if (array.length !== 0) {
     console.log(
-      `Ahoy, Captain! There are ${array.length} wealthy settlements to go to`
+      `Ahoy, Captain! There are ${array.length} wealthy settlements to go to:`
     );
     array.forEach((t) =>
       console.log(
