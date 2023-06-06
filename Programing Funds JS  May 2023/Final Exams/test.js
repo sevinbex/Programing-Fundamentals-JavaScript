@@ -11,3 +11,7 @@
   "TakeDamage - Ivor - 3 - Mosquito ",
   "End",
 ];
+
+//CTRL + F, click Use Regex
+//^(.*)$ за хващане на всичко, '$1', за слагане на кавички
+// Replace All
