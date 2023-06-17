@@ -27,5 +27,5 @@ function theLift(input) {
   }
 }
 
-theLift(["15", "0 0 0 0 0"]);
-// theLift(["20", "0 2 0"]);
+// theLift(["15", "0 0 0 0 0"]);
+theLift(["20", "0 2 0"]);
